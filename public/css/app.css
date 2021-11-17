@@ -189,12 +189,12 @@ header section .secondPart img {
   position: relative;
 }
 .sectionRecent_product .parent .child .image .hover {
+  display: none;
+  width: 100%;
+  justify-content: center;
   position: absolute;
   height: 70px;
   bottom: 0%;
-  display: flex;
-  width: 100%;
-  justify-content: center;
 }
 .sectionRecent_product .parent .child .image .hover .red {
   background-color: red;

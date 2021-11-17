@@ -28,12 +28,12 @@
             position: relative;
             .image{
                 .hover {
+                    display: none;  
+                    width: 100%;
+                    justify-content: center; 
                     position: absolute;
                     height: 70px;
                     bottom: 0% ;
-                    display: flex;  
-                    width: 100%;
-                    justify-content: center; 
                    
                     .red{
                         background-color: red;

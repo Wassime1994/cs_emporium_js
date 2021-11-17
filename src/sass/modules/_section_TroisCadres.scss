@@ -1,12 +1,13 @@
-.troisCadre {
 
+.troisCadre {
+    margin:  0 !important ; 
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 300px;
     div { 
         height: 200px;
-        border: 10px solid white;
+        border: 7px solid white;
     }
     a {
         text-decoration: none;
@@ -19,7 +20,7 @@
     }
     .service1{
       
-        background-image: url("../../../public/img/services/service-1.jpg");
+        background-image: url("../img/services/service-1.jpg");
         background-size: 100%;
         background-repeat: no-repeat;
         display: flex;
@@ -35,7 +36,7 @@
     }
     .service2{
     
-        background-image: url("../../../public/img/services/service-2.jpg");
+        background-image: url("../img/services/service-2.jpg");
         background-size: 100%;
         background-repeat: no-repeat;
         display: flex;
@@ -51,7 +52,7 @@
       }
     }
     .service3{
-        background-image: url("../../../public/img/services/slider-3.jpg");
+        background-image: url("../img/services/slider-3.jpg");
         background-size: 100%;
         background-repeat: no-repeat;
         display: flex;
@@ -67,3 +68,5 @@
       }
     }
 }
+
+

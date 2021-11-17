@@ -1,15 +1,45 @@
 body {
   margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.navListe {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  position: relative;
+  background-color: white;
+}
+.navListe h1 {
+  position: absolute;
+  left: 5%;
+  margin: 0;
+  padding: 0;
+}
+
+.gauche {
+  position: absolute;
+  left: 0%;
+  top: 0%;
 }
 
 header h1 {
   text-align: center;
   padding: 3%;
+  font-size: 60px;
 }
 header ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2%;
 }
 header ul li {
   margin: 8px;
@@ -96,7 +126,65 @@ header section .secondPart img {
   width: 100%;
 }
 
+footer {
+  background-color: grey;
+  height: auto;
+  width: 100%;
+  margin-top: 2%;
+  padding-top: 2%;
+}
+footer section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2%;
+}
+footer section p {
+  font-size: 10px;
+  color: rgba(211, 211, 211, 0.548);
+}
+footer section h2 {
+  color: lightgray;
+  font-size: 12px;
+}
+footer section ul {
+  list-style: none;
+}
+footer section ul a {
+  text-decoration: none;
+  color: white;
+  font-size: 10px;
+}
+footer section ul a:hover {
+  color: green;
+  text-decoration: none;
+}
+footer section .parent_span {
+  display: flex;
+  align-items: center;
+}
+footer section .parent_span span {
+  margin: 5px 3px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  padding: 2px;
+  color: lightgray;
+}
+footer section .parent_span span:hover {
+  background-color: white;
+  color: black;
+}
+footer .footerNoir {
+  background-color: black;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: lightgray;
+}
+
 .troisCadre {
+  margin: 0 !important;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -104,7 +192,7 @@ header section .secondPart img {
 }
 .troisCadre div {
   height: 200px;
-  border: 10px solid white;
+  border: 7px solid white;
 }
 .troisCadre a {
   text-decoration: none;
@@ -115,7 +203,7 @@ header section .secondPart img {
   text-decoration: none;
 }
 .troisCadre .service1 {
-  background-image: url("../../../public/img/services/service-1.jpg");
+  background-image: url("../img/services/service-1.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
   display: flex;
@@ -130,7 +218,7 @@ header section .secondPart img {
   border-bottom: 3px solid white;
 }
 .troisCadre .service2 {
-  background-image: url("../../../public/img/services/service-2.jpg");
+  background-image: url("../img/services/service-2.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
   display: flex;
@@ -146,7 +234,7 @@ header section .secondPart img {
   padding: 0 20%;
 }
 .troisCadre .service3 {
-  background-image: url("../../../public/img/services/slider-3.jpg");
+  background-image: url("../img/services/slider-3.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
   display: flex;
@@ -196,8 +284,12 @@ header section .secondPart img {
   height: 70px;
   bottom: 0%;
 }
+.sectionRecent_product .parent .child .image .hover i {
+  color: white;
+}
 .sectionRecent_product .parent .child .image .hover .red {
   background-color: red;
+  font-size: 10px;
   color: white;
   display: flex;
   align-items: center;
@@ -206,6 +298,7 @@ header section .secondPart img {
 }
 .sectionRecent_product .parent .child .image .hover .black {
   background-color: black;
+  font-size: 10px;
   color: white;
   display: flex;
   align-items: center;
@@ -233,10 +326,18 @@ header section .secondPart img {
   justify-content: center;
 }
 
+@keyframes up {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 50px;
+  }
+}
 .discover {
   height: auto;
   width: 100%;
-  background-image: url("../../../public/img/cta-bg.jpg");
+  background-image: url("../img/cta-bg.jpg");
   background-size: 100%;
   background-attachment: fixed;
 }
@@ -267,9 +368,42 @@ header section .secondPart img {
 .carrousel {
   padding: 3%;
 }
+.carrousel .hover {
+  display: none;
+}
+.carrousel .grey {
+  color: grey;
+  text-decoration: line-through;
+}
+.carrousel span {
+  color: red;
+}
+.carrousel .promo {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.carrousel .promo .rond {
+  font-size: 13px;
+  width: 35px;
+  height: 35px;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carrousel .mesdiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .carrousel img {
-  height: 130px;
-  width: 150px;
+  height: 150px;
+  width: 180px;
+  margin: 5px;
 }
 .carrousel h2 {
   text-align: center;
@@ -278,8 +412,14 @@ header section .secondPart img {
   font-size: 15px;
 }
 .carrousel .parent {
-  padding: 2%;
+  padding: 4%;
   display: flex;
+  justify-content: center;
+}
+.carrousel .parent .case1, .carrousel .parent .case2, .carrousel .parent .case3, .carrousel .parent .case4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 .carrousel .parent .child .grey {
@@ -288,21 +428,6 @@ header section .secondPart img {
 }
 .carrousel .parent .child span {
   color: red;
-}
-.carrousel .parent .child .promo {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-.carrousel .parent .child .promo .rond {
-  width: 50px;
-  height: 50px;
-  background-color: red;
-  border-radius: 50%;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .carrousel .mesBtn {
   width: 100%;
@@ -313,9 +438,32 @@ header section .secondPart img {
   margin: 10px;
   padding: 4px;
   border-radius: 50%;
-  background-color: white;
 }
 
+@keyframes lancerGauche {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-50px);
+    opacity: 50%;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes lancerDroit {
+  0% {
+    transform: translateX(300px);
+  }
+  50% {
+    transform: translateX(100px);
+    opacity: 50%;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .grosBlock .parent {
   display: flex;
 }

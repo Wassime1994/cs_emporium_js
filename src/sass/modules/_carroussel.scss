@@ -1,8 +1,43 @@
 .carrousel { 
     padding: 3%;
+    .hover { 
+        display: none;
+    }
+    .grey {
+        color : grey;
+        text-decoration:line-through;
+        
+    }
+    span {
+        color: red;
+    }
+    .promo {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+          .rond { 
+        font-size: 13px;
+        width: 35px;
+        height: 35px;
+        background-color: red;
+        border-radius: 50%;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    } 
+    }
+    .mesdiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     img {
-        height: 130px;
-        width: 150px;
+        height: 150px;
+        width: 180px;
+        margin: 5px;
     }
     h2{
         text-align: center;
@@ -11,33 +46,23 @@
         font-size: 15px;
     }
     .parent {
-        padding: 2%;
+        padding: 4%;
         display: flex;
         justify-content: center;
+        .case1,.case2,.case3,.case4 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
         .child {
             .grey {
                 color : grey;
-                text-decoration:line-through;      
+                text-decoration:line-through;
+                
             }
             span {
                 color: red;
-            }
-            .promo {
-                display: flex;
-                align-items: center;
-                justify-content: space-around;
-                  .rond { 
-                width: 50px;
-                height: 50px;
-                background-color: red;
-                border-radius: 50%;
-                color: white;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                
-              
-            } 
             }
         }
     }
@@ -47,9 +72,22 @@
         justify-content: center ; 
         button{
             margin: 10px;
-            padding: 4px;
+            padding : 4px;
             border-radius: 50%;
-            background-color: white;
         }
     }
+}
+
+@keyframes lancerGauche {
+    0%   { transform: translateX(0); }
+    50%  { transform: translateX(-50px);
+    opacity: 50%;}
+    100% { transform: translateX(0); }
+}
+
+@keyframes lancerDroit {
+    0%   { transform: translateX(300px); }
+    50%  { transform: translateX(100px);
+    opacity: 50%;}
+    100% { transform: translateX(0); }
 }

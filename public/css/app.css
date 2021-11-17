@@ -264,4 +264,56 @@ header section .secondPart img {
   text-decoration: none;
 }
 
+.carrousel {
+  padding: 3%;
+}
+.carrousel img {
+  height: 130px;
+  width: 150px;
+}
+.carrousel h2 {
+  text-align: center;
+}
+.carrousel h3 {
+  font-size: 15px;
+}
+.carrousel .parent {
+  padding: 2%;
+  display: flex;
+  justify-content: center;
+}
+.carrousel .parent .child .grey {
+  color: grey;
+  text-decoration: line-through;
+}
+.carrousel .parent .child span {
+  color: red;
+}
+.carrousel .parent .child .promo {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.carrousel .parent .child .promo .rond {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carrousel .mesBtn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.carrousel .mesBtn button {
+  margin: 10px;
+  padding: 4px;
+  border-radius: 50%;
+  background-color: white;
+}
+
 /*# sourceMappingURL=app.css.map */

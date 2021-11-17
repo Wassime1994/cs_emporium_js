@@ -1,0 +1,70 @@
+.troisCadre {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 300px;
+    div { 
+        height: 250px;
+        width: 30%;
+        margin: 2px;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+        &:hover { 
+            color: white;
+            text-decoration: none;
+
+        }
+    }
+    .service1{
+      
+        background-image: url("../../../public/img/services/service-1.jpg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            opacity: 70%;
+            border-radius: 15px;
+        }
+      h2{
+          border-bottom: 3px solid white;
+      }
+    }
+    .service2{
+    
+        background-image: url("../../../public/img/services/service-2.jpg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            opacity: 70%;
+            border-radius: 15px;
+        }
+      h2{
+          border-bottom: 3px solid white;
+          padding: 0 20%;
+      }
+    }
+    .service3{
+        background-image: url("../../../public/img/services/slider-3.jpg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            opacity: 70%;
+            border-radius: 15px;
+        }
+      h2{
+          border-bottom: 3px solid white;
+          padding: 0 20%;
+      }
+    }
+}

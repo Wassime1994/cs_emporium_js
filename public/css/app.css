@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 header h1 {
   text-align: center;
   padding: 3%;
@@ -90,6 +94,73 @@ header section .secondPart {
 }
 header section .secondPart img {
   width: 100%;
+}
+
+.troisCadre {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 300px;
+}
+.troisCadre div {
+  height: 250px;
+  width: 30%;
+  margin: 2px;
+}
+.troisCadre a {
+  text-decoration: none;
+  color: white;
+}
+.troisCadre a:hover {
+  color: white;
+  text-decoration: none;
+}
+.troisCadre .service1 {
+  background-image: url("../../../public/img/services/service-1.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.troisCadre .service1:hover {
+  opacity: 70%;
+  border-radius: 15px;
+}
+.troisCadre .service1 h2 {
+  border-bottom: 3px solid white;
+}
+.troisCadre .service2 {
+  background-image: url("../../../public/img/services/service-2.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.troisCadre .service2:hover {
+  opacity: 70%;
+  border-radius: 15px;
+}
+.troisCadre .service2 h2 {
+  border-bottom: 3px solid white;
+  padding: 0 20%;
+}
+.troisCadre .service3 {
+  background-image: url("../../../public/img/services/slider-3.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.troisCadre .service3:hover {
+  opacity: 70%;
+  border-radius: 15px;
+}
+.troisCadre .service3 h2 {
+  border-bottom: 3px solid white;
+  padding: 0 20%;
 }
 
 /*# sourceMappingURL=app.css.map */

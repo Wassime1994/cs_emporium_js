@@ -103,9 +103,8 @@ header section .secondPart img {
   height: 300px;
 }
 .troisCadre div {
-  height: 250px;
-  width: 30%;
-  margin: 2px;
+  height: 200px;
+  border: 10px solid white;
 }
 .troisCadre a {
   text-decoration: none;
@@ -161,6 +160,77 @@ header section .secondPart img {
 .troisCadre .service3 h2 {
   border-bottom: 3px solid white;
   padding: 0 20%;
+}
+
+.sectionRecent_product {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sectionRecent_product h2 {
+  text-align: center;
+}
+.sectionRecent_product h3 {
+  font-size: 18px;
+}
+.sectionRecent_product img {
+  height: 200px;
+  width: 220px;
+}
+.sectionRecent_product span {
+  color: red;
+}
+.sectionRecent_product .parent {
+  display: flex;
+}
+.sectionRecent_product .parent .child {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.sectionRecent_product .parent .child .image .hover {
+  position: absolute;
+  height: 70px;
+  bottom: 0%;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.sectionRecent_product .parent .child .image .hover .red {
+  background-color: red;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+.sectionRecent_product .parent .child .image .hover .black {
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+.sectionRecent_product .parent .child .grey {
+  color: grey;
+  text-decoration: line-through;
+}
+.sectionRecent_product .parent .child .promo {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.sectionRecent_product .parent .child .promo .rond {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=app.css.map */

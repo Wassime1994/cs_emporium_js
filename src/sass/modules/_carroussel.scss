@@ -46,15 +46,17 @@
         font-size: 15px;
     }
     .parent {
-        padding: 4%;
         display: flex;
         justify-content: center;
-        .case1,.case2,.case3,.case4 {
+        margin:0%;
+        width: 100%;
+        @media (max-width:450px) {
+            width: 50%;
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
+            align-items: center;
         }
+
         .child {
             .grey {
                 color : grey;
@@ -77,6 +79,28 @@
         }
     }
 }
+.case1 { 
+    @media (max-width:450px) {
+        display: flex;
+
+    }
+}
+.case2 { 
+    @media (max-width:450px) {
+        display: none;
+    }
+}
+.case3 { 
+    @media (max-width:450px) {
+        display: none;
+    }
+}
+.case4 { 
+    @media (max-width:450px) {
+        display: none;
+    }
+}
+
 
 @keyframes lancerGauche {
     0%   { transform: translateX(0); }

@@ -41,6 +41,12 @@ header ul {
   align-items: center;
   padding: 2%;
 }
+@media (max-width: 450px) {
+  header ul {
+    display: none;
+    flex-direction: column;
+  }
+}
 header ul li {
   margin: 8px;
   list-style: none;
@@ -103,6 +109,11 @@ header section .firstPart .titre_section .bolder {
   margin: 0;
   font-weight: bolder;
 }
+@media screen and (max-width: 400px) {
+  header section .firstPart .titre_section .bolder {
+    font-size: 40px;
+  }
+}
 header section .firstPart .para_section p {
   width: 70%;
   padding: 2%;
@@ -126,6 +137,125 @@ header section .secondPart img {
   width: 100%;
 }
 
+.inscriptionDiv {
+  display: none;
+  width: 100%;
+  opacity: 100%;
+  position: absolute;
+  height: auto;
+  width: 80%;
+  background-color: whitesmoke;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.inscriptionDiv .label {
+  margin-top: 10%;
+  width: 100%;
+}
+.inscriptionDiv .label label {
+  width: 100%;
+}
+.inscriptionDiv .label label input {
+  width: 100%;
+}
+.inscriptionDiv .label span {
+  color: #7e7e7e;
+  font-size: 11px;
+}
+.inscriptionDiv .haut {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10%;
+  position: relative;
+}
+.inscriptionDiv .haut h1 {
+  position: absolute;
+  left: 0%;
+  top: 2%;
+}
+.inscriptionDiv .haut I {
+  color: red;
+  position: absolute;
+  right: 0%;
+  top: 2%;
+}
+.inscriptionDiv .btn {
+  display: flex;
+}
+.inscriptionDiv .btn .btn1 {
+  flex: 3;
+  background-color: #df2121;
+  border: transparent;
+  color: white;
+  margin: 2px;
+}
+.inscriptionDiv .btn .btn2 {
+  background-color: #df2121;
+  border: transparent;
+  color: white;
+}
+.inscriptionDiv .blue {
+  background-color: #6767e0;
+  color: white;
+}
+.inscriptionDiv .mesicones {
+  display: flex;
+  justify-content: center;
+}
+.inscriptionDiv .mesicones i {
+  margin: 5px;
+  font-size: 20px;
+}
+.inscriptionDiv .inscription {
+  display: none;
+  width: 100%;
+}
+.inscriptionDiv .inscription label {
+  width: 100%;
+}
+.inscriptionDiv .inscription label input {
+  width: 95%;
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
+.burger {
+  visibility: hidden;
+}
+@media (max-width: 450px) {
+  .burger {
+    visibility: visible;
+  }
+}
+.burger i {
+  font-size: 50px;
+}
+
+.quitter {
+  font-size: 30px;
+  margin-top: 2%;
+}
+
+.monUlBurger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.monUlBurger li {
+  width: 100%;
+  font-size: 50px;
+  font-weight: bold;
+}
+
 footer {
   background-color: grey;
   height: auto;
@@ -138,6 +268,7 @@ footer section {
   justify-content: center;
   align-items: center;
   padding-bottom: 2%;
+  width: 100%;
 }
 footer section p {
   font-size: 10px;
@@ -188,7 +319,6 @@ footer .footerNoir {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 300px;
 }
 .troisCadre div {
   height: 200px;
@@ -250,38 +380,54 @@ footer .footerNoir {
   padding: 0 20%;
 }
 
-.sectionRecent_product {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .sectionRecent_product h2 {
   text-align: center;
 }
 .sectionRecent_product h3 {
-  font-size: 18px;
+  font-size: 15px;
 }
 .sectionRecent_product img {
   height: 200px;
-  width: 220px;
+  width: 250px;
+}
+@media (max-width: 800px) {
+  .sectionRecent_product img {
+    height: 350px;
+    width: 100%;
+  }
 }
 .sectionRecent_product span {
   color: red;
 }
 .sectionRecent_product .parent {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 .sectionRecent_product .parent .child {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 400px) {
+  .sectionRecent_product .parent .child {
+    padding: 0;
+  }
+}
+.sectionRecent_product .parent .child .image:hover .hover {
+  opacity: 100%;
+  animation: up 0.3s ease-out;
 }
 .sectionRecent_product .parent .child .image .hover {
-  display: none;
+  opacity: 0%;
+  display: flex;
   width: 100%;
   justify-content: center;
   position: absolute;
-  height: 70px;
+  height: 50px;
   bottom: 0%;
 }
 .sectionRecent_product .parent .child .image .hover i {
@@ -310,7 +456,7 @@ footer .footerNoir {
   text-decoration: line-through;
 }
 .sectionRecent_product .parent .child .promo {
-  margin: 20px;
+  margin-bottom: 5px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -412,15 +558,18 @@ footer .footerNoir {
   font-size: 15px;
 }
 .carrousel .parent {
-  padding: 4%;
   display: flex;
   justify-content: center;
+  margin: 0%;
+  width: 100%;
 }
-.carrousel .parent .case1, .carrousel .parent .case2, .carrousel .parent .case3, .carrousel .parent .case4 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+@media (max-width: 450px) {
+  .carrousel .parent {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .carrousel .parent .child .grey {
   color: grey;
@@ -438,6 +587,30 @@ footer .footerNoir {
   margin: 10px;
   padding: 4px;
   border-radius: 50%;
+}
+
+@media (max-width: 450px) {
+  .case1 {
+    display: flex;
+  }
+}
+
+@media (max-width: 450px) {
+  .case2 {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .case3 {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .case4 {
+    display: none;
+  }
 }
 
 @keyframes lancerGauche {
@@ -464,8 +637,15 @@ footer .footerNoir {
     transform: translateX(0);
   }
 }
+.grosBlock {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .grosBlock .parent {
   display: flex;
+  width: 100%;
 }
 .grosBlock .parent h2 {
   padding-top: 2%;
@@ -483,6 +663,7 @@ footer .footerNoir {
   margin-bottom: 5%;
 }
 .grosBlock .parent .child_different {
+  width: 100%;
   padding-top: 2%;
   display: flex;
   flex-direction: column;
@@ -497,6 +678,7 @@ footer .footerNoir {
   margin-bottom: 5%;
 }
 .grosBlock .parent .child {
+  width: 100%;
   padding-top: 2%;
   display: flex;
   flex-direction: column;

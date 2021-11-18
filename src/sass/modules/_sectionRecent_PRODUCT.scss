@@ -1,17 +1,17 @@
 .sectionRecent_product {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
     h2{
         text-align: center;
     }
     h3{
-        font-size: 18px;
+        font-size: 15px;
     }
     img { 
         height: 200px;
-        width: 220px;
+        width: 250px;
+        @media (max-width : 800px) {
+              height : 350px;
+                width : 100% ;
+            }
         // margin: 5px;
     }
     span {
@@ -19,27 +19,36 @@
     }
     .parent { 
         display: flex;
-    
-        
-
+        align-items: center;
+        justify-content: center;
+        width: 100%;
         .child { 
+            width: 100%;
             display: flex;
             flex-direction: column;
-            position: relative;
+            align-items: center;
+            justify-content: center;  
+            @media  (max-width : 400px) {
+                padding: 0;
+            }          
             .image{
+                &:hover { 
+                    .hover { 
+                    opacity: 100%;
+                   animation: up .3s ease-out;
+                    }
+                }
                 .hover {
-                    display: none;  
+                    opacity: 0%;  
+                    display: flex;
                     width: 100%;
                     justify-content: center; 
                     position: absolute;
-                    height: 70px;
+                    height: 50px;
                     bottom: 0% ;
-                    
-                    // animation: up 1s infinite;
                     i {
                         color: white;
-                    }
-                   
+                    }         
                     .red{
                         background-color: red;
                         font-size: 10px;
@@ -48,9 +57,7 @@
                         align-items: center;
                         justify-content: center;
                         width: 50%;
-                        
-                        
-                        
+     
                     }
                     .black {
                         background-color: black;
@@ -65,21 +72,17 @@
         
                 }
             }
-          
-            
-            
             .grey {
                 color : grey;
                 text-decoration:line-through;
                 
             }
             .promo {
-                margin: 20px;
+                margin-bottom: 5px;
                 display: flex;
                 align-items: center;
                 justify-content: space-around;
                   .rond { 
-
                 width: 50px;
                 height: 50px;
                 background-color: red;
@@ -89,7 +92,6 @@
                 align-items: center;
                 justify-content: center;
                 
-              
             } 
             }
          

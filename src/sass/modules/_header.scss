@@ -1,6 +1,8 @@
 body {
     margin: 0;
     padding: 0;
+
+    
 }
 nav { 
     background-color: white;
@@ -23,6 +25,7 @@ nav {
 
     
 }
+
 .gauche { 
     position: absolute ;
     left: 0%;
@@ -41,7 +44,10 @@ header {
         justify-content: center;
         align-items: center;
         padding: 2%;
-
+        @media  (max-width : 450px) {
+        display: none;
+        flex-direction: column;
+        }
         li{
             margin: 8px;
             list-style: none;
@@ -104,6 +110,9 @@ header {
                 font-size: 80px;
                 margin: 0;
                 font-weight: bolder;
+                @media screen and (max-width :400px){
+                    font-size: 40px;
+                }
             }
             }
             .para_section {
@@ -135,5 +144,127 @@ header {
         }
         }
         
+    }
+}
+
+.inscriptionDiv { 
+    display: none;
+    width: 100%;
+    opacity: 100%;
+    position : absolute ; 
+    height: auto;
+    width: 80%;
+    background-color: whitesmoke;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% ,-50% );
+    .label {
+        margin-top: 10%;
+        width: 100%;
+        label { 
+            width: 100% ; 
+            input { 
+                width: 100%
+            }
+        }
+        ;
+        span { 
+            color: rgb(126, 126, 126);
+            font-size: 11px;
+        }
+      
+    }
+
+    .haut {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 10%;
+        position: relative;
+        h1 {
+            position: absolute;
+            left: 0%;
+            top: 2%;
+        }
+
+        I { 
+            color: red;
+            position: absolute;
+            right: 0%;
+            top: 2%;
+
+        }
+    }
+    .btn { 
+        display: flex;
+        .btn1 { 
+            flex: 3;
+            background-color: rgb(223, 33, 33);
+            border: transparent;
+            color: white;
+            margin: 2px;
+        }
+        .btn2 { 
+            background-color: rgb(223, 33, 33);
+            border: transparent;
+            color: white;
+        }
+    }
+    .blue {
+        background-color: rgb(103, 103, 224);
+        color: white;
+    }
+    .mesicones {
+        display: flex;
+        justify-content: center;
+        i {
+            margin: 5px;
+            font-size: 20px;
+        }
+    }
+    .inscription { 
+        display: none;
+        width: 100%;
+        label { 
+            width: 100% ; 
+            input { 
+                width: 95%
+            }
+        }
+    }
+}
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+  }
+.burger { 
+    // display: none;
+    visibility: hidden;
+    @media  (max-width:450px) {
+        // display: block;
+        visibility: visible;
+    }
+ 
+    i { 
+        font-size: 50px;
+    }
+}
+.quitter {
+    font-size: 30px;
+    margin-top: 2%;
+}
+
+.monUlBurger { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    li { 
+        width: 100%;
+        font-size: 50px;
+        font-weight: bold;
     }
 }

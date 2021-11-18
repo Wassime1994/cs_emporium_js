@@ -4,10 +4,10 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 300px;
     div { 
         height: 200px;
         border: 7px solid white;
+
     }
     a {
         text-decoration: none;
@@ -19,7 +19,6 @@
         }
     }
     .service1{
-      
         background-image: url("../img/services/service-1.jpg");
         background-size: 100%;
         background-repeat: no-repeat;

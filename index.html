@@ -14,16 +14,54 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="inscription">
-        <h1>Salut</h1>
-    </div>
+        <div class="inscriptionDiv">
+            <div class="haut">
+                <h1>emporium.</h1>
+                <i class="fas fa-sign-out-alt quitter"></i>
+            </div>
+    
+            <div class="btn">
+                <button class="btn1 btn1_connexion">Connexion</button>
+                <button class="btn2 inscriptionBtn">Inscription</button>
+            </div>
+            <div class="label container">
+    
+                <label for="email"> Email address
+                    <input type="email" placeholder="abc@hotmail.com">
+                     <br><span>We'll never share your email width anyone else.</span>
+            </label>
+                <label for="password"> Password
+                    <input type="password" placeholder="****">
+                </label> <br>
+            </div>
+            <div class="inscription">
+                <label for="passwordconfirm">Confirmez votre mot de passe
+                    <input type="password" placeholder="****">
+                </label>
+                <br>
+                <input type="checkbox"> Femme <br>
+                <input type="checkbox"> Homme <br>
+            </div>
+    
+            <input type="checkbox"> Check me out <br>
+            <button class="blue">Connexion</button>
+            <div class="mesicones">
+                <i class="fab fa-facebook-f text-primary"></i>
+                <i class="fab fa-instagram-square"></i>
+                <i class="fab fa-snapchat-square text-warning "></i>
+                <i class="fas fa-desktop"></i>
+            </div>
+    
+        </div>
+  
+
     <header>
         <nav>
             <div class="titre">
                 <h1> emporium.</h1>
             </div>
             <div class="navListe">
-                <ul>
+                <ul class='monUl w-100l'>
                     <li><a href="">HOME</a></li>
                     <li><a href="">PRODUCT</a></li>
                     <li><a href="">BLOG</a></li>
@@ -42,11 +80,14 @@
                 </ul>
             </div>
         </nav>
-        <section class="section_header">
+        <div class="burger">
+            <i class="fas fa-bars"></i>  
+        </div>
+        <section class="section_header w-100">
             <div class="firstPart container">
                 <div class="titre_section">
                     <h2 class="red"> Shop at.</h2>
-                    <h2 class="bolder">emporium.</h2>
+                    <h2 class="bolder ">emporium.</h2>
                 </div>
                 <div class="para_section">
                     <p>A wonderful serenity has taken possession of my my entiere soul , like these sweet mornings of
@@ -60,35 +101,36 @@
         </section>
     </header>
     <section class="troisCadre row ">
-        <div class="service1 col-4 m-0">
+        <div class="service1 col-sm-12 col-lg-4 mb-2 ">
             <h2><a href="">Living Room</a></h2>
         </div>
-        <div class="service2 col-4 m-0">
+        <div class="service2 col-sm-12 col-lg-4 mb-2">
             <h2><a href="">Sale Items</a></h2>
         </div>
-        <div class="service3 col-4 m-0">
+        <div class="service3 col-sm-12 col-lg-4 mb-2">
             <h2><a href="">Clothes</a></h2>
         </div>
     </section>
+    
     <section class="sectionRecent_product">
         <section>
-            <h2>Recent Products</h2>
-            <div class="parent row">
-                <div class="child col-4 position-relative">
+            <h2 >Recent Products</h2>
+            <div class="parent row ">
+                <div class="child col-sm-12 col-lg-4  m-0">
                     <div class="image position-relative">
                         <img src="./public/img/products_mini/product-luxry-sofa.jpg" alt="">
                         <div class="hover ">
                             <span class="red"> <i class="fas fa-eye"></i>Views Details</span><span class="black"> <i
-                                    class="fas fa-shopping-cart"></i>Add to Cart</span>
+                                 class="fas fa-shopping-cart"></i>Add to Cart</span>
                         </div>
                     </div>
-                    <div class="d-flex flex-column align-items-center justify-content-center mt-3">
+                    <div class="d-flex flex-column align-items-center justify-content-center ">
                         <h3> Luxury Sofa</h3>
                         <span>$600.00</span>
                     </div>
                 </div>
 
-                <div class="child sale col-4">
+                <div class="child sale col-sm-12 col-lg-4 m-0 p-0">
                     <div class="image position-relative">
                         <img src="./public/img/products_mini/product-gloves.jpg" alt="">
                         <div class="hover ">
@@ -96,7 +138,7 @@
                                     class="fas fa-shopping-cart"></i>Add to Cart</span>
                         </div>
                     </div>
-                    <div class="promo d-flex align-items-center justify-content-around">
+                        <div class="promo d-flex align-items-center justify-content-around">
                         <div class="rond"> Sale !</div>
                         <div>
                             <h3>Leather Gloves</h3>
@@ -108,7 +150,7 @@
 
 
 
-                <div class="child col-4 position-relative">
+                <div class="child col-sm-12 col-lg-4 position-relative">
                     <div class="image position-relative">
                         <img src="./public/img/products_mini/product-cups.jpg" alt="">
                         <div class="hover ">
@@ -116,17 +158,16 @@
                                     class="fas fa-shopping-cart"></i>Add to Cart</span>
                         </div>
                     </div>
-                    <div class="d-flex flex-column align-items-center mt-3">
+                    <div class="d-flex flex-column align-items-center ">
                         <h3> Colorful Bowl</h3>
                         <span>$18.00</span>
                     </div>
 
                 </div>
             </div>
-            </div>
 
             <div class="parent row">
-                <div class="child col-4">
+                <div class="child col-sm-12 col-lg-4">
                     <div class="image position-relative">
                         <img src="./public/img/products_mini/product-bag.jpg" alt="">
                         <div class="hover">
@@ -143,7 +184,7 @@
                     </div>
 
                 </div>
-                <div class="child col-4">
+                <div class="child col-sm-12 col-lg-4">
                     <div class="image position-relative">
                         <img src="./public/img/products_mini/product-tshitr.jpg" alt="">
                         <div class="hover ">
@@ -157,7 +198,7 @@
                     </div>
 
                 </div>
-                <div class="child col-4">
+                <div class="child col-sm-12 col-lg-4">
                     <div class="image position-relative">
                         <img src="./public/img/products_mini/product-plates.jpg" alt="">
                         <div class="hover ">
@@ -172,10 +213,8 @@
 
                 </div>
             </div>
-
-
             <div class="parent row">
-                <div class="child col-4">
+                <div class="child o col-sm-12 col-lg-4 mt-5">
                     <div class="image position-relative">
                         <img src="./public/img/products_mini/product-modern-sofa.jpg" alt="">
                         <div class="hover ">
@@ -188,7 +227,7 @@
                         <span>$900.00</span>
                     </div>
                 </div>
-                <div class="child col-4">
+                <div class="child col-sm-12 col-lg-4">
                     <div class="image position-relative">
                         <img src="./public/img/products_mini/product-bed.jpg" alt="">
                         <div class="hover ">
@@ -201,7 +240,7 @@
                         <span>$79.00</span>
                     </div>
                 </div>
-                <div class="child col-4">
+                <div class="child col-sm-12 col-lg-4">
                     <div class="image position-relative">
                         <img src="./public/img/products_mini/product-shoes.jpg" alt="">
                         <div class="hover ">
@@ -227,11 +266,11 @@
     </section>
     <section class="carrousel">
         <h2>Hot Fashion Products</h2>
-        <div class="parent row">
-            <div class="case1"></div>
-            <div class="case2"></div>
-            <div class="case3"></div>
-            <div class="case4"></div>
+        <div class="parent">
+            <div class=" case1 col-3" ></div>
+            <div class=" case2 col-3"></div>
+            <div class="  case3 col-3"></div>
+            <div class="  case4 col-3"></div>
         </div>
         <div class="mesBtn">
             <button id="gauche"></button>
@@ -241,8 +280,8 @@
         </div>
     </section>
     <section class="grosBlock">
-        <div class="parent">
-            <div class="child">
+        <div class="parent row w-100">
+            <div class="child col-sm-12 col-lg-4">
                 <i class="far fa-check-circle"></i>
                 <h2>TRSUTED BY 10,000 CUSTOMERS</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et velit sit blanditiis cupiditate molestias
@@ -250,7 +289,7 @@
                     repudiandae reiciendis aliquid eum illo autem excepturi! Commodi voluptatem illum natus facilis.</p>
                 <button>Learn More</button>
             </div>
-            <div class="child_different">
+            <div class="child_different col-sm-12 col-lg-4">
                 <i class="far fa-paper-plane"></i>
                 <h2>VERY FAST SHIPPING</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In animi similique necessitatibus iusto odit
@@ -260,7 +299,7 @@
                 <button>Learn More</button>
             </div>
 
-            <div class="child ">
+            <div class="child col-sm-12 col-lg-4">
                 <i class="far fa-check-circle"></i>
                 <h2>TRSUTED BY 10,000 + CUSTOMERS</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos magnam adipisci qui doloremque
@@ -275,7 +314,7 @@
     <footer>
         <section class="main row m-0">
 
-            <div class="monPara col-3">
+            <div class="monPara col-sm-12 col-lg-3">
                 <h2> ABOUT US</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi repudiandae consequatur quod! Rerum
                     ratione qui corrupti aliquid quas corporis, ipsam quisquam natus maiores asperiores. Aspernatur
@@ -283,7 +322,7 @@
                     voluptatibus sequi possimus impedit deserunt, mollitia unde incidunt blanditiis ipsa cum ut error
                     quos perspiciatis repellat nemo ad! Nemo obcaecati explicabo quam!</p>
             </div>
-            <div class="mesLiens col-3">
+            <div class="mesLiens col-sm-12  col-lg-3">
                 <h2>RECENTS POSTS</h2>
                 <ul>
                     <li><a href="">>Hello World</a></li>
@@ -292,7 +331,7 @@
                     <li><a href="">>I hear the buzz of the little</a></li>
                 </ul>
             </div>
-            <div class="mesSpan col-3">
+            <div class="mesSpan col-sm-12 col-lg-3">
                 <h2>TAG CLOUD</h2>
                 <div class="parent_span ">
                     <span>business</span>

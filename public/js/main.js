@@ -57,23 +57,12 @@ window.addEventListener("scroll", () => {
     if (window.scrollY > 270) {
         navListe.prepend(titre)
         navListe.style.position = "fixed"
+        navListe.style.backgroundColor="white"
+        navListe.style.zIndex=2
     } else if (window.scrollY < 270) {
         nav.prepend(titre)
         navListe.style.position = "relative"
     }
-
-})
-imageProduct.forEach(element => {
-    element.addEventListener('mouseover', () => {
-        element.nextElementSibling.style.display = 'flex'
-        element.nextElementSibling.style.animation = "up .2s ease-out"
-    })
-    element.addEventListener('mouseout', () => {
-        setTimeout(() => {
-            element.nextElementSibling.style.display = 'none'
-        }, 1000);
-
-    })
 
 })
 addCart.forEach(element => {
@@ -111,28 +100,7 @@ image6.src = "../../public/img/products_mini/product-plates.jpg"
 image7.src = "../../public/img/products_mini/product-modern-sofa.jpg"
 image8.src = "../../public/img/products_mini/product-bed.jpg"
 image9.src = "../../public/img/products_mini/product-shoes.jpg"
-
-
-
 let parentCarrousel = carrousel.querySelector('.parent')
-
-// btnGauche.addEventListener('click', () => {
-//     parentCarrousel.innerHTML=""
-//    testArray = [image1,image2,image3,image4]
-//     testArray.forEach(element=>{
-//         parentCarrousel.append(element)
-//     })
-//     testArray[0].style.animation = "lancerDroit 1.5s ease-out"
-//     testArray[1].style.animation = "lancerDroit 1.6s ease-out"
-//     testArray[2].style.animation = "lancerDroit 1.7s ease-out"
-//     testArray[3].style.animation = "lancerDroit 1.8s ease-out"
-
-//     setTimeout(() => {
-//     testArray[0].style.animation = ""
-//     }, 1000)
-
-// })
-
 let case1 = document.querySelector('.case1')
 let case2 = document.querySelector('.case2')
 let case3 = document.querySelector('.case3')
@@ -210,10 +178,37 @@ btnGauche.addEventListener('click', () => {
 
 })
 
+// CREATION CARROUSEL RESPONSIVE 
+
+let grosseDiv = document.querySelector('.inscriptionDiv')
+let inscriptionBtn = document.querySelector('.inscriptionBtn')
+let connexionbtn2 = document.querySelector('.btn1_connexion')
+let confirmDiv = document.querySelector('.inscription')
+let quitterInscription = document.querySelector('.quitter')
 let connexion = document.querySelector('.connexion')
 connexion.addEventListener('click', ()=>{
-    alert('hi')
+    grosseDiv.style.display="block"
+    document.body.className = ' stop-scrolling'
+
 })
+document.body.classList.remove('stop-scrolling')
+quitterInscription.addEventListener('click', ()=>{
+    grosseDiv.style.display="none"
+    document.body.className=""
+})
+inscriptionBtn.addEventListener('click', ()=>{
+   confirmDiv.style.display="inline"
+})
+connexionbtn2.addEventListener('click', ()=>{
+    confirmDiv.style.display="none"
+})
+let monUl = document.querySelector('.monUl')
+mesLi = monUl.querySelectorAll('li')
+let ecran = screen.width
+let burger = document.querySelector('.burger')
+burger.addEventListener("click", ()=>{ 
+            monUl.classList.toggle('monUlBurger')
+        })
 
 
 

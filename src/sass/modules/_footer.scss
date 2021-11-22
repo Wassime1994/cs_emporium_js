@@ -4,6 +4,8 @@ footer {
     width: 100%;
     margin-top: 2%;
     padding-top: 2% ;
+
+    
    section {
        display: flex;
        justify-content: center;
@@ -14,6 +16,9 @@ footer {
        p{
            font-size: 10px;
            color: rgba(211, 211, 211, 0.548);
+           @media (max-width : 400px) {
+            font-size: 20px;
+          }
            
        }
        h2{
@@ -27,6 +32,9 @@ footer {
                text-decoration: none;
                color: white;
                font-size: 10px;
+               @media (max-width : 400px) {
+                font-size: 20px;
+              }
                &:hover { 
                    color : green ; 
                    text-decoration: none;
@@ -43,6 +51,9 @@ footer {
                border: 1px solid lightgray;
                padding: 2px;
                color: lightgray;
+               @media (max-width : 400px) {
+                font-size: 20px;
+              }
                &:hover {
                    background-color: white;
                    color: black;
@@ -57,5 +68,8 @@ footer {
        align-items: center;
        justify-content: center;
        color: lightgray;
+       @media (max-width : 400px) {
+        font-size: 20px;
+      }
    }
 }

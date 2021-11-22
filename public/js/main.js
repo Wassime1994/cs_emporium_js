@@ -15,16 +15,21 @@ let sectionHeader = header.querySelector('.section_header')
 let bolderSection = document.querySelector('.bolder')
 let troisGrosBlock = document.querySelector('.troisCadre')
 let divTroisGrosBlock = troisGrosBlock.querySelectorAll('div')
+let monUl = document.querySelector('.monUl')
+let emporium = document.querySelector('.emporium')
 sombre.addEventListener('click', ()=>{
     document.body.style.backgroundColor="black"
     header.style.backgroundColor="black"
     nav.style.backgroundColor="black"
     nav.style.color ="white"
+    emporium.style.color="red"
+    navListe.style.backgroundColor="white"
     navListe.style.backgroundColor="black"
     liens.forEach(element=>{
         element.style.color="white"
         clair.style.backgroundColor="white"
     })
+
     sombre.style.border="1px solid red"
     sectionHeader.style.backgroundColor="black" 
     sectionHeader.style.border="5px red solid" 
@@ -32,12 +37,17 @@ sombre.addEventListener('click', ()=>{
     divTroisGrosBlock.forEach(element=>{
         element.style.border="10px solid black"
     })
+    burger.style.color = "white"
+    
 })
 clair.addEventListener('click', ()=>{
+    burger.style.color = "black"
+
+    emporium.style.color="black"
     document.body.style.backgroundColor= "white"
     header.style.backgroundColor="white"
     nav.style.backgroundColor="white"
-    nav.style.color ="black"
+    navListe.style.backgroundColor="black"
     navListe.style.backgroundColor="white"
     liens.forEach(element=>{
         element.style.color="black"
@@ -53,15 +63,23 @@ clair.addEventListener('click', ()=>{
 
 })
 
+let titreTest = document.querySelector('.imgTitre')
+titreTest.style.paddingTop = "5%"
+monUl.style.paddingTop ="5%"
+
 window.addEventListener("scroll", () => {
-    if (window.scrollY > 270) {
-        navListe.prepend(titre)
-        navListe.style.position = "fixed"
-        navListe.style.backgroundColor="white"
-        navListe.style.zIndex=2
-    } else if (window.scrollY < 270) {
-        nav.prepend(titre)
-        navListe.style.position = "relative"
+    console.log(window.scrollY);
+    if (window.scrollY > 400) {
+        navListe.className="effetScroll"
+        // navListe.classList.toggle('effetScroll')
+        monUl.style.padding="0"
+        titreTest.style.padding=0
+    } 
+    else if (window.scrollY < 200) {
+        navListe.className="navListe"
+        titreTest.style.paddingTop = "5%"
+        monUl.style.paddingTop ="5%"
+
     }
 
 })
@@ -186,14 +204,25 @@ let connexionbtn2 = document.querySelector('.btn1_connexion')
 let confirmDiv = document.querySelector('.inscription')
 let quitterInscription = document.querySelector('.quitter')
 let connexion = document.querySelector('.connexion')
+let papaInscription = document.querySelector('.papaInscription')
+papaInscription.style.display ="none"
+function monScroll()
+{
+    window.scroll(0,0);
+    	scroller = setTimeout(monScroll(),10);
+}
 connexion.addEventListener('click', ()=>{
     grosseDiv.style.display="block"
+    window.scrollBy(0,0);
     document.body.className = ' stop-scrolling'
-
+    papaInscription.style.display="flex"
+    monScroll()
+   
 })
 document.body.classList.remove('stop-scrolling')
 quitterInscription.addEventListener('click', ()=>{
     grosseDiv.style.display="none"
+    papaInscription.style.display ="none"
     document.body.className=""
 })
 inscriptionBtn.addEventListener('click', ()=>{
@@ -202,13 +231,14 @@ inscriptionBtn.addEventListener('click', ()=>{
 connexionbtn2.addEventListener('click', ()=>{
     confirmDiv.style.display="none"
 })
-let monUl = document.querySelector('.monUl')
 mesLi = monUl.querySelectorAll('li')
 let ecran = screen.width
 let burger = document.querySelector('.burger')
 burger.addEventListener("click", ()=>{ 
-            monUl.classList.toggle('monUlBurger')
+       monUl.classList.toggle('monUlBurger')
+
         })
+        
 
 
 

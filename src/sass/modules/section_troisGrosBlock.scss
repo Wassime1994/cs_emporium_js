@@ -30,6 +30,12 @@
             align-items: center;
             background-color: red;
             color: white;
+            p{
+                @media (max-width : 400px) {
+                    font-size: 20px;
+                  }
+            }
+          
             button { 
                 background-color: white;
                 color: black;
@@ -44,6 +50,12 @@
             flex-direction: column;
             align-items: center;
             background-color: lightgray;
+            p{
+                @media (max-width : 400px) {
+                    font-size: 20px;
+                  }
+            }
+ 
 
         }
     }
